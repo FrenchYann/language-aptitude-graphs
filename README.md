@@ -16,7 +16,10 @@ For now it has two tabs:
   - Phrasing
   - Grammar
 
-But in reality, you can use it for other things by directly doing something like:
+Available here:  
+https://frenchyann.github.io/language-aptitude-graphs
+
+But in reality, you can use it for other things by directly doing something like:  
 https://frenchyann.github.io/language-aptitude-graphs/graph?labels=any,number,of,thing,you,want,to,graph
 
 Have fun.
