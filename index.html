@@ -13,11 +13,11 @@
         <a href="#writing" class="tablinks" id="writing-tab">Writting</a>
       </div>
       <iframe class="tabcontent"
-        id="reading"
+        id="reading-content"
         src="graph.html?labels=Pronounciation,Delivery,Content,Comprehension,Phrasing,Grammar"
       ></iframe>
       <iframe class="tabcontent"
-        id="writing"
+        id="writing-content"
         src="graph.html?labels=Convention,Hand Writing,Content,Comprehension,Phrasing,Grammar"
       ></iframe>
     </table>
@@ -49,11 +49,11 @@
         }
         switch (frame) {
           case '#writing':
-            document.getElementById('writing').style.display = 'block';
+            document.getElementById('writing-content').style.display = 'block';
             break;
           case '#reading':
           default:
-            document.getElementById('reading').style.display = 'block';
+            document.getElementById('reading-content').style.display = 'block';
         }
       }
 
