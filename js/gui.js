@@ -112,10 +112,6 @@ function svgToImage(svg, png = true) {
     img.onload = function() {
       ctx.drawImage(this, 0, 0);
       download(ctx.canvas.toDataURL(), 'graph.png');
-      //var i = new Image();
-      //i.src = ctx.canvas.toDataURL();
-      //var w = window.open("");
-      //w.document.write(i.outerHTML);
     };
   } else {
     download(svg_img_uri, 'graph.svg');
@@ -132,8 +128,6 @@ function download(url, filename) {
 }
 
 function makeExportButtons($root, config) {
-  //<button id="to_png">Download As PNG</button> 
-  //<button id="to_svg">Download As SVG</button><br />
   const $to_png = document.createElement('button');
   $to_png.textContent = 'Download As PNG';
   $to_png.onclick = function() {
