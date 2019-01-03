@@ -145,19 +145,6 @@ function makeExportButtons($root, config) {
     svgToImage($root.querySelector('svg'), false);
   };
   
-
-  const base = `${window.location.origin}${window.location.pathname}`;
-  /*
-  const $link = document.createElement('a')
-  const $to_link = document.createElement('button');
-  $to_link.textContent = 'Link';
-  $to_link.onclick = function() {
-    let link = `${base}?config=${window.generate_config(config)}`
-  };
-  */
-  
-  //const $output = document.createElement('textarea');
-  //$output.style.display = 'none';
   const $to_embed = document.createElement('button');
   $to_embed.textContent = 'Embed SVG';
   $to_embed.onclick = function() {
@@ -176,9 +163,7 @@ function makeExportButtons($root, config) {
   const $container = document.createElement('div');
   $container.appendChild($to_png);
   $container.appendChild($to_svg);
-  //$container.appendChild($to_link);
   $container.appendChild($to_embed);
-  //$container.appendChild($output);
   $root.appendChild($container);
 
 }

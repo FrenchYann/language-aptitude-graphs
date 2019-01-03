@@ -39,16 +39,6 @@
   ];
   let config = default_config;
 
-  let isEmbedded = !!query_string.embed && query_string.config;
-  if (query_string.config) {
-    try {
-      config = retrieve_config(query_string.config);
-    } catch (e) {
-      window.alert('invalid config');
-      console.error(e);
-      isEmbedded = false;
-    }
-  }
 
   for (let graph of config.graphs) {
     graph.data = enforce_array_length(
@@ -59,5 +49,4 @@
   }
 
   window.config = config;
-  window.isEmbedded = isEmbedded;
 }
