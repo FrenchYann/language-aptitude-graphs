@@ -44,17 +44,3 @@ const enforce_array_length = (arr, length, default_value) => {
   }
   return res;
 };
-
-const create_graph = (data_length, max_value) => {
-  const graph_color = random_color();
-  return {
-    fill: graph_color,
-    opacity: 0.8,
-    stroke: d3
-      .color(graph_color)
-      .darker()
-      .hex(),
-    line_width: 3,
-    data: new Array(data_length).fill().map(() => random_int(1, max_value + 1))
-  };
-};

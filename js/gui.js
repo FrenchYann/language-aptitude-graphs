@@ -86,7 +86,7 @@ function make_gui(config, update) {
 
   let add_graph_button;
   let add_graph = {["Add Graph"]: ()=>{
-    let new_graph = create_graph(grid_settings.labels.length, grid_settings.max_value);
+    let new_graph = create_graph(graphs.length);
     let index = graphs.push(new_graph);
     make_graph_gui(gui, `Graph${index}`, grid_settings, new_graph, remover(new_graph));
     gui.remove(add_graph_button);
