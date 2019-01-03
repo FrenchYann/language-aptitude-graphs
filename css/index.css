@@ -1,3 +1,7 @@
+html,
+body {
+  height: 100%;
+}
 iframe {
   padding: 0;
   margin: 0;
@@ -37,7 +41,6 @@ iframe {
 /* Style the tab content */
 .tabcontent {
   display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
   border-top: none;
+  min-height: 100%;
 }
