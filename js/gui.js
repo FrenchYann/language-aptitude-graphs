@@ -129,12 +129,12 @@ function download(url, filename) {
 
 function makeExportButtons($root, config) {
   const $to_png = document.createElement('button');
-  $to_png.textContent = 'Download As PNG';
+  $to_png.textContent = 'Download PNG';
   $to_png.onclick = function() {
     svgToImage($root.querySelector('svg'));
   };
   const $to_svg = document.createElement('button');
-  $to_svg.textContent = 'Download As SVG';
+  $to_svg.textContent = 'Download SVG';
   $to_svg.onclick = function() {
     svgToImage($root.querySelector('svg'), false);
   };
