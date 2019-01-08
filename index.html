@@ -9,32 +9,32 @@
   </head>
   <body>
       <div class="tab">
-        <a href="#reading" class="tablinks" id="reading-tab">Reading</a>
-        <a href="#writing" class="tablinks" id="writing-tab">Writting</a>
+        <a href="#spoken" class="tablinks" id="spoken-tab">Spoken</a>
+        <a href="#written" class="tablinks" id="written-tab">Written</a>
       </div>
       <iframe class="tabcontent"
-        id="reading-content"
+        id="spoken-content"
         src="graph.html?labels=Comprehension,Content,Delivery,Pronunciation,Phrasing,Grammar"
       ></iframe>
       <iframe class="tabcontent"
-        id="writing-content"
+        id="written-content"
         src="graph.html?labels=Comprehension,Content,Conventions,Hand%20Writing,Phrasing,Grammar"
       ></iframe>
     </table>
 
     <script>
-      let $reading_tab = document.getElementById('reading-tab');
-      let $writing_tab = document.getElementById('writing-tab');
+      let $spoken_tab = document.getElementById('spoken-tab');
+      let $written_tab = document.getElementById('written-tab');
       const on_tab_click = e => {
         e.preventDefault();
         let hash = e.target.getAttribute('href');
         window.location.hash = hash;
         activate_frame(hash);
       };
-      $reading_tab.onclick = on_tab_click;
-      $writing_tab.onclick = on_tab_click;
+      $spoken_tab.onclick = on_tab_click;
+      $written_tab.onclick = on_tab_click;
 
-      function activate_frame(frame = '#reading') {
+      function activate_frame(frame = '#spoken') {
         const active_class = "active";
         for (let button of document.querySelectorAll('.tab a')){
           if (button.getAttribute('href') === frame) {
@@ -48,12 +48,12 @@
           iframe.style.display = 'none';
         }
         switch (frame) {
-          case '#writing':
-            document.getElementById('writing-content').style.display = 'block';
+          case '#written':
+            document.getElementById('written-content').style.display = 'block';
             break;
-          case '#reading':
+          case '#spoken':
           default:
-            document.getElementById('reading-content').style.display = 'block';
+            document.getElementById('spoken-content').style.display = 'block';
         }
       }
 
