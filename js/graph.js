@@ -90,7 +90,8 @@
     let label_position = [];
     let radial_lines = [];
     for (let i = 0; i < grid_settings.labels.length; i++) {
-      let angle = (i * Math.PI * 2) / grid_settings.labels.length - Math.PI / 2;
+      let angle =
+        -(i * Math.PI * 2) / grid_settings.labels.length - Math.PI / 2;
       let vec_x = Math.cos(angle);
       let vec_y = Math.sin(angle);
       radial_lines.push({
@@ -133,7 +134,7 @@
         return (d / grid_settings.max_value) * grid_settings.radius;
       })
       .angle(function(d, i, data) {
-        return i * ((Math.PI * 2) / data.length);
+        return -i * ((Math.PI * 2) / data.length);
       });
 
   window.update = function(root, config) {

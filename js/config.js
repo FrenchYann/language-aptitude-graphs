@@ -2,11 +2,11 @@
   const query_string = parse_query_string(window.location.search);
   const default_labels = [
     'Comprehension',
-    'Content',
-    'Delivery',
-    'Pronunciation',
+    'Grammar',
     'Phrasing',
-    'Grammar'
+    'Pronunciation',
+    'Delivery',
+    'Content'
   ];
   let labels = default_labels;
   if (query_string.labels) {
